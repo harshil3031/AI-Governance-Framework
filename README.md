@@ -9,7 +9,31 @@ Standard AI prompts often lead to:
 - **Overengineering**: AI adding complex abstractions for simple tasks.
 - **Instability**: AI breaking existing code while trying to fix a bug.
 
-## 🛠 The Solution: Three-Layer Governance
+### � Workflow Architecture
+```mermaid
+graph TD
+    User([Developer]) -->|Submits TASK_TEMPLATE| AI{AI Agent}
+    
+    subgraph Governance_Layer [The Constitutional Layer]
+        AI -->|Consults| Blueprint[PROJECT_CONTEXT.md]
+        AI -->|Adheres to| Mindset[AGENT_BEHAVIOR.md]
+        AI -->|Enforces| Standard[AI_EXECUTION_CONTRACT.md]
+    end
+
+    Blueprint -.->|Architecture Alignment| Logic[Safe Implementation Plan]
+    Mindset -.->|Decision Boundaries| Logic
+    Standard -.->|Engineering Quality| Logic
+
+    Logic -->|Human-in-the-loop Check| User
+    User -->|Approved| Exec[Final Production Code]
+    
+    style Governance_Layer fill:#f9f9f9,stroke:#333,stroke-width:2px
+    style AI fill:#e1f5fe,stroke:#01579b
+    style Exec fill:#c8e6c9,stroke:#2e7d32
+```
+
+## �🛠 The Solution: Three-Layer Governance
+
 This framework uses four specialized files to control AI behavior:
 
 ### 1. `PROJECT_CONTEXT.md` (The Blueprint)
