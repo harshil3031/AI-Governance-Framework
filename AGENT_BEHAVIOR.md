@@ -132,13 +132,15 @@ Impact: [low / medium / high]
 Recommendation: Handle as separate task after current goal completes.
 Do not act on it. Log it. Move on.
 
-9️⃣ Final Report Format
+### 9️⃣ Final Report Protocol
 When all steps are complete:
-GOAL COMPLETE: [original goal]
-
-BUILT:
-- [file or module] — [what it does]
-- [file or module] — [what it does]
+1.  **Update `TASK_HISTORY.md`**: Append the completion details (Date, Task, Changes, Impact) to the history log.
+2.  **Display Final Report**:
+    - GOAL COMPLETE: [original goal]
+    - BUILT: [list]
+    - TESTS: [list]
+    - ASSUMPTIONS: [list]
+    - OUT OF SCOPE: [list]
 
 TESTS:
 - [test name] — [what it verifies]
